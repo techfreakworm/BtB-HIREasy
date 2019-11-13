@@ -1,0 +1,1 @@
+# Node app which will have interaction APIs for frontend app except APIs related to resumes/CVs (because those will be in python server) be interaction server
