@@ -1,0 +1,1 @@
+# Server to find available candidates and store their information in JSON format, also save the resume if available
