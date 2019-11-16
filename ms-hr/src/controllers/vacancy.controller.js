@@ -18,6 +18,42 @@ class VacancyController extends BaseController {
       super.sendErrorResponse({ req, res, errResponse: err });
     }
   }
+
+  async createVacancy(req, res) {
+    try {
+      const response = await vacancy.createVacancy({ body: req.body });
+
+      super.sendResponse({ req, res, response });
+    } catch (err) {
+      super.sendErrorResponse({ req, res, errResponse: err });
+    }
+  }
+
+  async updateVacancy(req, res) {
+    try {
+      const response = await vacancy.updateVacancy({
+        id: req.body.id,
+        body: req.body
+      });
+
+      super.sendResponse({ req, res, response });
+    } catch (err) {
+      super.sendErrorResponse({ req, res, errResponse: err });
+    }
+  }
+
+  async deleteVacancy(req, res) {
+    try {
+      const response = await vacancy.deleteVacancy({
+        id: req.body.id,
+        useSoftDelete: false
+      });
+
+      super.sendResponse({ req, res, response });
+    } catch (err) {
+      super.sendErrorResponse({ req, res, errResponse: err });
+    }
+  }
 }
 
 module.exports = { VacancyController };

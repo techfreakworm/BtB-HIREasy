@@ -5,5 +5,11 @@ module.exports = (fastify, option, done) => {
 
   fastify.get("/vacancies", vacancies.getVacancies);
 
+  fastify.post("/vacancies", vacancies.createVacancy);
+
+  fastify.patch("/vacancies", vacancies.updateVacancy);
+
+  fastify.delete("/vacancies", vacancies.deleteVacancy);
+
   done();
 };

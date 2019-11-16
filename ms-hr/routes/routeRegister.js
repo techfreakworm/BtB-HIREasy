@@ -1,3 +1,3 @@
 module.exports = app => {
-  require("./admin-routes/adminRouteRegiser")(app);
+  require("./admin-routes/adminRouteRegister")(app);
 };
