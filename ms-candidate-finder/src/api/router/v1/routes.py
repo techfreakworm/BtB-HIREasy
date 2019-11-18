@@ -1,10 +1,10 @@
-from src.api.server import app
 from flask_cors import cross_origin
-from flask import request, jsonify
+from flask import request, jsonify, Blueprint
 
+routes_blueprint = Blueprint('routes', 'routes')
 
 # TODO: Implement auth middleware
-@app.route('/file', methods=['GET', 'POST'])
+@routes_blueprint.route('/file', methods=['GET', 'POST'])
 @cross_origin(headers=["Content-Type", "Authorization"])
 def file():
     if request.method == 'GET':
