@@ -1,6 +1,6 @@
 from flask import request, jsonify
 from src.handlers.file_handler import FileHandler
-from config import Config
+from src.config import Config
 
 def create_or_get_file(request):
     if request.method == 'GET':

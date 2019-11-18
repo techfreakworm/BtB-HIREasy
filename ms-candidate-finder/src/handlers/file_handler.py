@@ -1,5 +1,5 @@
 from src.db.mongo_adapter import MongoAdapter
-from config import Config
+from src.config import Config
 from datetime import datetime
 from werkzeug.utils import secure_filename
 
